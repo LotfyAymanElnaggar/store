@@ -1,5 +1,6 @@
 # store
 
+
 ### Steps
 
 - Install Git-bash Or use [cygwin](#https://www.cygwin.com/) for windows to use linux and git commands on windows
@@ -45,3 +46,39 @@
   "build": "npx tsc",
   "start:prod": "npm run build && node dist/index.js",
   },
+
+- install prettier
+
+  - yarn add --dev prettier
+  - install prettier extention in vs code
+  - touch .prettierrc.json
+    {
+    "singleQuote": true,
+    "printWidth": 80,
+    "bracketSpacing": true,
+    "semi": false
+    }
+
+- Install eslint
+
+  - yarn add --dev eslint
+  - npx eslint --init
+
+- Configure eslint with prettier
+
+  - yarn add --dev eslint-config-prettier eslint-plugin-prettier
+
+    extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    ],
+    plugins: ['@typescript-eslint', 'prettier'],
+    rules: {
+    'prettier/prettier': 2,
+    }
+
+
+
+
+[yonisfy](#https://www.yonisfy.com/udacity/projects/image-processing-api)
