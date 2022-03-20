@@ -31,7 +31,7 @@ app.use(
 
 // add routing for / path
 app.get('/', (req: Request, res: Response) => {
-  throw new Error();
+  // throw new Error();
 
   res.json({
     message: 'Hello World 🌍',
